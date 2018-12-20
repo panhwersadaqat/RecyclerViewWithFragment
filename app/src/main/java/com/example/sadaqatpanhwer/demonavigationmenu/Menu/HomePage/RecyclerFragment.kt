@@ -12,6 +12,13 @@ import android.widget.ImageView
 import android.widget.Toast
 import com.example.sadaqatpanhwer.demonavigationmenu.R
 import java.util.ArrayList
+import android.widget.AdapterView.OnItemClickListener
+import android.support.v4.content.ContextCompat.startActivity
+import android.content.Intent
+
+
+
+
 
 class RecyclerFragment : Fragment() {
 
@@ -51,21 +58,29 @@ class RecyclerFragment : Fragment() {
         array_image3.add(R.drawable.d)
 
 
+
         val recyclerView1 = view.findViewById<RecyclerView>(R.id.recycler_view)
         val recyclerView2 = view.findViewById<RecyclerView>(R.id.recycler_viewtwo)
         val recyclerView3 = view.findViewById<RecyclerView>(R.id.recycler_viewthree)
+
+
+
+
 
         val horizontalLayoutManagaer = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         recyclerView1.layoutManager = horizontalLayoutManagaer
 
         recyclerView1.adapter = RecyclerViewAdapter(array_image1)
-        recyclerView2.adapter = RecyclerViewAdapter(array_image2)
-        recyclerView3.adapter = RecyclerViewAdapter(array_image3)
+        recyclerView2.adapter = RecyclerViewAdapter2(array_image2)
+        recyclerView3.adapter = RecyclerViewAdapter3(array_image3)
         return view
     }
 
     //recycler view holder class
     private inner class RecyclerViewHolder(inflater: LayoutInflater, container: ViewGroup) : RecyclerView.ViewHolder(inflater.inflate(R.layout.card_view, container, false)) {
+
+
+
          val mCardView: CardView
          val mImageView: ImageView
 
@@ -74,10 +89,10 @@ class RecyclerFragment : Fragment() {
             mImageView = itemView.findViewById(R.id.image_holder)
 
 
-            itemView.setOnClickListener {
-                val position = adapterPosition
-                Toast.makeText(view!!.context, "Item is clicked "+adapterPosition, Toast.LENGTH_SHORT).show()
-            }//end of item click
+//            itemView.setOnClickListener {
+//                val position = adapterPosition
+//                Toast.makeText(view!!.context, "Item is clicked "+adapterPosition, Toast.LENGTH_SHORT).show()
+//            }//end of item click
 
         }
     }
@@ -92,11 +107,119 @@ class RecyclerFragment : Fragment() {
 
         override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
          holder.mImageView.setImageResource(array_image[position])
+            holder.itemView.setOnClickListener { v ->
+                if (position == 0) {
+                    Toast.makeText(view!!.context, "1st row  1st item", Toast.LENGTH_SHORT).show()
+
+                } else if (position == 1) {
+                    Toast.makeText(view!!.context, "1st row  2nd item", Toast.LENGTH_SHORT).show()
+
+                } else if (position == 2) {
+                    Toast.makeText(view!!.context, "1st row  3rd item", Toast.LENGTH_SHORT).show()
+
+
+                } else if (position == 3) {
+                    Toast.makeText(view!!.context, "1st row  4rth item", Toast.LENGTH_SHORT).show()
+
+                } else if (position == 4) {
+                    Toast.makeText(view!!.context, "1st row  5th item", Toast.LENGTH_SHORT).show()
+
+                } else if (position == 5) {
+                    Toast.makeText(view!!.context, "1st row  6th item", Toast.LENGTH_SHORT).show()
+
+                }else if(position==6){
+                    Toast.makeText(view!!.context, "1st row  7th item", Toast.LENGTH_SHORT).show()
+
+                }
+            }
         }
 
         override fun getItemCount(): Int {
             return array_image.size
         }
     }
+    //2ndrecyler view adaptere class
+    private inner class RecyclerViewAdapter2(private val array_image2: ArrayList<Int>) : RecyclerView.Adapter<RecyclerViewHolder>() {
+        override fun onCreateViewHolder(parents: ViewGroup, viewType: Int): RecyclerViewHolder {
+            val inflater = LayoutInflater.from(activity)
+            return RecyclerViewHolder(inflater, parents)
 
+
+        }
+
+        override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
+            holder.mImageView.setImageResource(array_image2[position])
+            holder.itemView.setOnClickListener { v ->
+                if (position == 0) {
+                    Toast.makeText(view!!.context, "2nd row  1st item", Toast.LENGTH_SHORT).show()
+
+                } else if (position == 1) {
+                    Toast.makeText(view!!.context, "2nd row  2nd item", Toast.LENGTH_SHORT).show()
+
+                } else if (position == 2) {
+                    Toast.makeText(view!!.context, "2nd row  3rd item", Toast.LENGTH_SHORT).show()
+
+
+                } else if (position == 3) {
+                    Toast.makeText(view!!.context, "2nd row  4rth item", Toast.LENGTH_SHORT).show()
+
+                } else if (position == 4) {
+                    Toast.makeText(view!!.context, "2nd row  5th item", Toast.LENGTH_SHORT).show()
+
+                } else if (position == 5) {
+                    Toast.makeText(view!!.context, "2nd row  6th item", Toast.LENGTH_SHORT).show()
+
+                }else if(position==6){
+                    Toast.makeText(view!!.context, "2nd row  7th item", Toast.LENGTH_SHORT).show()
+
+                }
+            }
+        }
+         override fun getItemCount(): Int {
+            return array_image2.size
+        }
+    }
+
+    //3rd recyler view adaptere class
+    private inner class RecyclerViewAdapter3(private val array_image3: ArrayList<Int>) : RecyclerView.Adapter<RecyclerViewHolder>() {
+        override fun onCreateViewHolder(parents: ViewGroup, viewType: Int): RecyclerViewHolder {
+            val inflater = LayoutInflater.from(activity)
+            return RecyclerViewHolder(inflater, parents)
+
+
+        }
+
+        override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
+            holder.mImageView.setImageResource(array_image3[position])
+            holder.itemView.setOnClickListener { v ->
+                if (position == 0) {
+                    Toast.makeText(view!!.context, "3rd row  1st item", Toast.LENGTH_SHORT).show()
+
+                } else if (position == 1) {
+                    Toast.makeText(view!!.context, "3rd row  2nd item", Toast.LENGTH_SHORT).show()
+
+                } else if (position == 2) {
+                    Toast.makeText(view!!.context, "3rd row  3rd item", Toast.LENGTH_SHORT).show()
+
+
+                } else if (position == 3) {
+                    Toast.makeText(view!!.context, "3rd row  4rth item", Toast.LENGTH_SHORT).show()
+
+                } else if (position == 4) {
+                    Toast.makeText(view!!.context, "3rd row  5th item", Toast.LENGTH_SHORT).show()
+
+                } else if (position == 5) {
+                    Toast.makeText(view!!.context, "3rd row  6th item", Toast.LENGTH_SHORT).show()
+
+                }else if(position==6){
+                    Toast.makeText(view!!.context, "3rd row  7th item", Toast.LENGTH_SHORT).show()
+
+                }
+            }
+        }
+
+        override fun getItemCount(): Int {
+            return array_image3.size
+        }
+    }
 }
