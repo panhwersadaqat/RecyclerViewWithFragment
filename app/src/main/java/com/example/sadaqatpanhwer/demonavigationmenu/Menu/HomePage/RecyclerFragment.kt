@@ -15,9 +15,7 @@ import java.util.ArrayList
 import android.widget.AdapterView.OnItemClickListener
 import android.support.v4.content.ContextCompat.startActivity
 import android.content.Intent
-
-
-
+import io.reactivex.Observable
 
 
 class RecyclerFragment : Fragment() {
