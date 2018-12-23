@@ -106,7 +106,15 @@ class RecyclerFragment : Fragment() {
         override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
          holder.mImageView.setImageResource(array_image[position])
             holder.itemView.setOnClickListener { v ->
-
+                when (position) {
+                    0 -> Toast.makeText(view!!.context,"1st  row   1st item", Toast.LENGTH_SHORT).show()
+                    1-> Toast.makeText(view!!.context, "1st  row   2nd item", Toast.LENGTH_SHORT).show()
+                    2-> Toast.makeText(view!!.context, "1st  row   3rd item", Toast.LENGTH_SHORT).show()
+                    3-> Toast.makeText(view!!.context, "1st  row   4th item", Toast.LENGTH_SHORT).show()
+                    4-> Toast.makeText(view!!.context, "1st  row   5th item", Toast.LENGTH_SHORT).show()
+                    5-> Toast.makeText(view!!.context, "1st  row   6th item", Toast.LENGTH_SHORT).show()
+                    6-> Toast.makeText(view!!.context, "1st  row   7th item", Toast.LENGTH_SHORT).show()
+                }
             }
         }
 
@@ -126,7 +134,15 @@ class RecyclerFragment : Fragment() {
         override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
             holder.mImageView.setImageResource(array_image2[position])
             holder.itemView.setOnClickListener { v ->
-
+                when (position) {
+                    0 -> Toast.makeText(view!!.context,"2nd row   1st item", Toast.LENGTH_SHORT).show()
+                    1-> Toast.makeText(view!!.context, "2nd row   2nd item", Toast.LENGTH_SHORT).show()
+                    2-> Toast.makeText(view!!.context, "2nd row   3rd item", Toast.LENGTH_SHORT).show()
+                    3-> Toast.makeText(view!!.context, "2nd row   4th item", Toast.LENGTH_SHORT).show()
+                    4-> Toast.makeText(view!!.context, "2nd row   5th item", Toast.LENGTH_SHORT).show()
+                    5-> Toast.makeText(view!!.context, "2nd row   6th item", Toast.LENGTH_SHORT).show()
+                    6-> Toast.makeText(view!!.context, "2nd row   7th item", Toast.LENGTH_SHORT).show()
+                }
             }
         }
          override fun getItemCount(): Int {
@@ -146,7 +162,15 @@ class RecyclerFragment : Fragment() {
         override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
             holder.mImageView.setImageResource(array_image3[position])
             holder.itemView.setOnClickListener { v ->
-
+                when (position) {
+                    0 -> Toast.makeText(view!!.context,"3rd row   1st item", Toast.LENGTH_SHORT).show()
+                    1-> Toast.makeText(view!!.context, "3rd row   2nd item", Toast.LENGTH_SHORT).show()
+                    2-> Toast.makeText(view!!.context, "3rd row   3rd item", Toast.LENGTH_SHORT).show()
+                    3-> Toast.makeText(view!!.context, "3rd row   4th item", Toast.LENGTH_SHORT).show()
+                    4-> Toast.makeText(view!!.context, "3rd row   5th item", Toast.LENGTH_SHORT).show()
+                    5-> Toast.makeText(view!!.context, "3rd row   6th item", Toast.LENGTH_SHORT).show()
+                    6-> Toast.makeText(view!!.context, "3rd row   7th item", Toast.LENGTH_SHORT).show()
+                }
             }
         }
 
